@@ -1,8 +1,9 @@
 const hex = document.getElementById('colorpicker');
 const dropdown = document.getElementById('myDropdown');
 var body = document.body;
-let past = [];
+let past = ['#000000'];
 let dValue;
+populateDropdown();
 
 function changeBackgroundColor() {
     var color = hex.value;
