@@ -5,6 +5,7 @@ let past = ['#000000'];
 let dValue;
 populateDropdown();
 
+// CHANGE BACKGROUND COLOR ON BUTTON PRESS
 function changeBackgroundColor() {
     var color = hex.value;
 
@@ -30,6 +31,7 @@ function changeBackgroundColor() {
     body.style.backgroundColor = color;
 }
 
+// TRACKS OLD COLORS
 function populateDropdown() {
     var option = document.createElement('option');
     option.value = past[0];
@@ -44,6 +46,7 @@ setInterval(() => {
     }
 }, 25);
 
+// REMOVE OPTION FROM DROPDOWN
 function removeOption(val) {
     var options = dropdown.options;
     for (let i = 1; i < options.length; i++) {
@@ -53,6 +56,7 @@ function removeOption(val) {
     }
 }
 
+// KEEPS DROPDOWN SIZE AT 10
 function limitOptions() {
     var options = dropdown.options;
     for (let i = 10; i < options.length; i++) {
@@ -60,6 +64,7 @@ function limitOptions() {
     }
 }
 
+// CHANGES BACKGROUND COLOR VIA DROPDOWN
 function dropdownChange() {
     body.style.backgroundColor = dValue;
     hex.value = dValue;
