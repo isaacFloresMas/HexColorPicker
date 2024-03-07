@@ -39,6 +39,7 @@ function populateDropdown() {
     dropdown.prepend(option);
 }
 
+// Checking if a new color was chosen
 setInterval(() => {
     if (dValue != dropdown.value) {
         dValue = dropdown.value;
